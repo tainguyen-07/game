@@ -1,0 +1,81 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://tile.tres" type="TileSet" id=1]
+[ext_resource path="res://walking time/215752781_1695730577304003_20069621982974318_n.png" type="Texture" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://walking time/210824753_1624009481136861_1097172337047976626_n.png" type="Texture" id=4]
+[ext_resource path="res://walking time/217130244_363030761904434_5429701258698726098_n.png" type="Texture" id=5]
+[ext_resource path="res://walking time/216225139_1126440764430570_8572221258892542812_n.png" type="Texture" id=6]
+[ext_resource path="res://219394334_782436119115204_836280386507445116_n.jpg" type="Texture" id=7]
+[ext_resource path="res://walking time/217151604_519106366079701_7995210575556824676_n.png" type="Texture" id=8]
+[ext_resource path="res://walking time/211379848_1531747580489926_6270303630587958279_n.png" type="Texture" id=9]
+[ext_resource path="res://walking time/208334342_574713603912586_2880255338855976186_n.png" type="Texture" id=10]
+[ext_resource path="res://walking time/209341251_268490381711964_1367598637039853648_n.png" type="Texture" id=11]
+[ext_resource path="res://walking time/213333155_4120144318020591_8448175610640459572_n.png" type="Texture" id=12]
+[ext_resource path="res://walking time/215962612_3713048952129192_8728669396005956188_n.png" type="Texture" id=13]
+[ext_resource path="res://walking time/214782946_950806338834794_4930220269007937239_n.png" type="Texture" id=14]
+[ext_resource path="res://walking time/215962272_332841854850999_8221361025329598028_n.png" type="Texture" id=15]
+[ext_resource path="res://walking time/215284755_555795232137369_834849177646807308_n.png" type="Texture" id=16]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 20.0
+height = 18.7089
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "run",
+"speed": 11.0
+} ]
+
+[node name="World" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ -1993.73 ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -1, 0 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -393248, 0, 0, -393246, 0, 0, -393244, 0, 0, -393242, 0, 0, -327712, 0, 0, -327710, 0, 0, -327708, 0, 0, -327706, 0, 0, -262176, 0, 0, -262174, 0, 0, -262172, 0, 0, -262170, 0, 0, -196640, 0, 0, -196638, 0, 0, -196636, 0, 0, -196634, 0, 0, -131104, 0, 0, -131102, 0, 0, -131100, 0, 0, -131098, 0, 0, -131092, 0, 0, -131090, 0, 0, -131088, 0, 0, -65568, 0, 0, -65566, 0, 0, -65564, 0, 0, -65562, 0, 0, -65557, 0, 0, -65555, 0, 0, -65553, 0, 0, -65551, 0, 0, -65549, 0, 0, -32, 0, 0, -30, 0, 0, -28, 0, 0, -26, 0, 0, -24, 0, 0, -23, 0, 0, -22, 0, 0, -21, 0, 0, -20, 0, 0, -19, 0, 0, -17, 0, 0, -15, 0, 0, -13, 0, 0, -11, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, 65504, 0, 0, 65506, 0, 0, 65508, 0, 0, 65510, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65517, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 131040, 0, 0, 131041, 0, 0, 131042, 0, 0, 131044, 0, 0, 131046, 0, 0, 131048, 0, 0, 131049, 0, 0, 131050, 0, 0, 131051, 0, 0, 131052, 0, 0, 131053, 0, 0, 131054, 0, 0, 131055, 0, 0, 131056, 0, 0, 131057, 0, 0, 131059, 0, 0, 131061, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 196576, 0, 0, 196577, 0, 0, 196578, 0, 0, 196580, 0, 0, 196582, 0, 0, 196583, 0, 0, 196585, 0, 0, 196586, 0, 0, 196587, 0, 0, 196588, 0, 0, 196589, 0, 0, 196590, 0, 0, 196591, 0, 0, 196592, 0, 0, 196593, 0, 0, 196594, 0, 0, 196595, 0, 0, 196596, 0, 0, 196597, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( -110.627, -61.6567 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 2.6727, 9.35443 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 1.88776, 3.77548 )
+current = true
+zoom = Vector2( 0.8, 0.7 )
+smoothing_enabled = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+position = Vector2( 0, 2 )
+frames = SubResource( 2 )
+animation = "run"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2( 2, 2 )
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1692, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -278 )
+texture = ExtResource( 7 )
+centered = false
